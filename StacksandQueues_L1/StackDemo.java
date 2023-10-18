@@ -10,6 +10,11 @@ public class StackDemo {
 
         ArrayDeque <Integer> stack = new ArrayDeque<>();
 
+        // Stack - LIFO - Last in First out
+        // push(element) - insert element on the top of the stack
+        // pop() - remove topmost element
+        // peek() - get topmost element
+
         //1. Stack fill
        // Arrays.stream(scanner.nextLine().split("\\s+")).map (Integer::parseInt).forEach(stack::push);
 
