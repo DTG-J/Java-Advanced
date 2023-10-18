@@ -25,13 +25,18 @@ public class QueueDemo {
 
         /*3. Отпечатване на данни от опашката:*/
 
+        /* Първи начин:
         for (String element: deque) {
             System.out.print(element + " ");
 
+        }*/
+        //Втори начин
+        /*deque.forEach(System.out::print);*/
 
-            
-            
-        }
+        //Трети начин
+        System.out.println(deque.stream().map(String::valueOf)
+                .collect(Collectors.joining(", ")));
+
 
     }
 }
