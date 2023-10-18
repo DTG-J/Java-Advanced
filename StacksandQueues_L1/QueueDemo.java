@@ -25,6 +25,16 @@ public class QueueDemo {
         /*Deque<String> deque = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .collect(Collectors.toCollection(ArrayDeque::new));*/
 
+
+      /*  2.2 Втори начин за пълнене на String данни от конзолата:
+        String [] children = scanner.nextLine().split("\\s+");
+
+        ArrayDeque <String> queue = new ArrayDeque<>();
+
+        for (String child : children) {
+            queue.offer(child);
+        }*/
+
         /*3. Отпечатване на данни от опашката:*/
 
         /* Първи начин:
