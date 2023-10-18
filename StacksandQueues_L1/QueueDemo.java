@@ -8,6 +8,11 @@ public class QueueDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // Queue - FIFO - First in First out
+        // offer(element) - add element at the start of the Queue
+        // poll() - remove first element of the Queue
+        // peek() - get first element of the Queue
+
         //ArrayDeque<Integer> queue1 = new ArrayDeque<>();
         //ArrayDeque<String> queue2 = new ArrayDeque<>();
 
