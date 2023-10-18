@@ -23,7 +23,16 @@ public class QueueDemo {
         Deque<String> deque = Arrays.stream(scanner.nextLine().split("\\s+"))
                 .collect(Collectors.toCollection(ArrayDeque::new));
 
-        System.out.println();
+        /*3. Отпечатване на данни от опашката:*/
+
+        for (String element: deque) {
+            System.out.print(element + " ");
+
+
+            
+            
+        }
+
     }
 }
 
