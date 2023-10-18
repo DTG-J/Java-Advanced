@@ -40,6 +40,10 @@ public class StackDemo {
 
         stack.forEach(System.out::println);
 
+     //   while (!stack.isEmpty()) {
+            //        System.out.println(stack.pop());
+            //        }
+
 
 
 
