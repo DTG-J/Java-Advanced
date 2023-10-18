@@ -1,10 +1,7 @@
 package StacksandQueues_L1;
 
-import java.util.ArrayDeque;
+import java.util.*;
 
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class QueueDemo {
@@ -57,8 +54,21 @@ public class QueueDemo {
 
         queue.forEach(System.out::println);
 
+       // while (!queue.isEmpty()) {
+            //            System.out.println(queue.poll());
+            //        }
+// PriorityQueue
+        PriorityQueue<Character> priorityQueue = new PriorityQueue<>(Collections.reverseOrder());
 
+        priorityQueue.offer('1');
+        priorityQueue.offer('2');
+        priorityQueue.offer('3');
+        priorityQueue.offer('4');
+        priorityQueue.offer('5');
 
+        while (!priorityQueue.isEmpty()) {
+            System.out.println(priorityQueue.poll());
+        }
 
     }
 }
