@@ -18,8 +18,6 @@ public class StackDemo {
         //1. Stack fill
        // Arrays.stream(scanner.nextLine().split("\\s+")).map (Integer::parseInt).forEach(stack::push);
 
-
-
         stack.push(2);
         stack.push(3);
         stack.push(5);
