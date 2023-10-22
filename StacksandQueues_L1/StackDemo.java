@@ -8,15 +8,34 @@ public class StackDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        ArrayDeque <Integer> stack = new ArrayDeque<>();
 
         // Stack - LIFO - Last in First out
         // push(element) - insert element on the top of the stack
         // pop() - remove topmost element
         // peek() - get topmost element
+        ArrayDeque <Integer> stack = new ArrayDeque<>();
+
+        //Създаване на наша структура от данни, която се държи като стек:
+        /*public class Jar {
+            private ArrayDeque <Integer> stack;
+            //При създаването на конструктура казваме:
+            public Jar (){
+                this.stack = new ArrayDeque<>();
+                }
+                public void add (Integer element){
+                stack.push(element);
+                }
+                public Integer remove () {
+                return stack.pop();
+                }*/
+
+
+        }
 
         //1. Stack fill
        // Arrays.stream(scanner.nextLine().split("\\s+")).map (Integer::parseInt).forEach(stack::push);
+
+
 
         stack.push(2);
         stack.push(3);
@@ -38,9 +57,11 @@ public class StackDemo {
 
         stack.forEach(System.out::println);
 
-     //   while (!stack.isEmpty()) {
-            //        System.out.println(stack.pop());
-            //        }
+        //        while (!stack.isEmpty()) {
+        //        System.out.println(stack.pop());
+        //        }
+
+
 
 
 
