@@ -15,8 +15,8 @@ public class StackDemo {
         // peek() - get topmost element
         ArrayDeque <Integer> stack = new ArrayDeque<>();
 
-        //Създаване на наша структура от данни, която се държи като стек:
-        /*public class Jar {
+        //Създаване на наша структура от данни, която се държи като стек: но например да нямаме метод peek
+       /* public class Jar {
             private ArrayDeque <Integer> stack;
             //При създаването на конструктура казваме:
             public Jar (){
@@ -27,10 +27,8 @@ public class StackDemo {
                 }
                 public Integer remove () {
                 return stack.pop();
-                }*/
-
-
-        }
+                }
+        }*/
 
         //1. Stack fill
        // Arrays.stream(scanner.nextLine().split("\\s+")).map (Integer::parseInt).forEach(stack::push);
