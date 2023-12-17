@@ -26,7 +26,7 @@ public class MatrixConsoleFillByColumns {
                     matrix[row] = rowInput;
                 }
 
-                // Print the filled matrix
+                // Print the filled matrix the standart way
                 for (int row = 0; row < rows; row++) {
                     for (int col = 0; col < cols; col++) {
                         System.out.print(matrix[row][col] + " ");
