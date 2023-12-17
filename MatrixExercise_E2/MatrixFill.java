@@ -11,7 +11,7 @@ public class MatrixFill {
 
         int [][] matrix = new int [rows][cols];
 
-        //MatrixFill
+        //MatrixFill with secuentual numbers that begin from the count
         int count = 1;
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
