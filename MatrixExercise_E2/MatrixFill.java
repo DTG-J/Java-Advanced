@@ -1,5 +1,6 @@
 package MultidimentionalArrays_Matrix_L2.src;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MatrixFill {
@@ -11,7 +12,7 @@ public class MatrixFill {
 
         int [][] matrix = new int [rows][cols];
 
-        //MatrixFill with secuentual numbers that begin from the count
+        //MatrixFill
         int count = 1;
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
@@ -21,13 +22,24 @@ public class MatrixFill {
         }
 
         //PrintTheMatrix
-        for (int row = 0; row < rows; row++) {
+       /* for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
                 System.out.print(matrix [row][col] + " ");
             }
             System.out.println();
 
-        }
+        }*/
+        printMatrixWithForeach(matrix);
 
+
+
+    }
+    private static void printMatrixWithForeach(int[][] matrix) {
+        for (int[] row : matrix) {
+            for (int element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
     }
 }
