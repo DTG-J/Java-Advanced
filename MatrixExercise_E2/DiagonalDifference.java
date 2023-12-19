@@ -23,10 +23,16 @@ public class DiagonalDifference {
             }
         }*/
         int secondDiagSum = 0;
-        for (int row = matrixSize - 1, col = 0; col< matrixSize && row >=0 ; row--, col++) {
+       /* for (int row = matrixSize - 1, col = 0; col< matrixSize && row >=0 ; row--, col++) {
             secondDiagSum += matrix [row][col];
+        }*/
+
+        for (int row = 0; row < matrixSize; row++) {
+            secondDiagSum +=  matrix [row][matrixSize-row-1];
+
         }
-        System.out.println();
+
+
     }
 
     private static void MatrixConsoleRead(int matrixSize, Scanner scanner, int[][] matrix) {
