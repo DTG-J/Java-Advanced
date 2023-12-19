@@ -28,10 +28,11 @@ public class DiagonalDifference {
         }*/
 
         for (int row = 0; row < matrixSize; row++) {
-            secondDiagSum +=  matrix [row][matrixSize-row-1];
+            secondDiagSum +=  matrix [row][matrixSize-1-row];
 
         }
-
+        int diagonalDiff = Math.abs(mainDiagSum - secondDiagSum);
+        System.out.println(diagonalDiff);
 
     }
 
