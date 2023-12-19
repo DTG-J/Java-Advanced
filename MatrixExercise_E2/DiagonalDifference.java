@@ -9,11 +9,9 @@ public class DiagonalDifference {
         int matrixSize = Integer.parseInt(scanner.nextLine());
 
         int [][] matrix = new int[matrixSize][matrixSize];
-
         MatrixConsoleRead(matrixSize, scanner, matrix);
 
         int mainDiagSum = 0;
-        int secondDiagSum = 0;
         for (int counter = 0; counter < matrix.length; counter++) {
             mainDiagSum += matrix [counter][counter];
         }
@@ -24,9 +22,9 @@ public class DiagonalDifference {
                 }
             }
         }*/
-        MatrixConsoleRead(matrixSize, scanner, matrix);
-        for (int i = matrixSize -1; i >=0 ; i--) {
-            secondDiagSum += matrix [i][i];
+        int secondDiagSum = 0;
+        for (int row = matrixSize - 1, col = 0; col< matrixSize && row >=0 ; row--, col++) {
+            secondDiagSum += matrix [row][col];
         }
         System.out.println();
     }
