@@ -19,7 +19,8 @@ public class MaximalSum {
             matrix [i]= rowOfElements;
 
         }
-        System.out.println();
+        int maxSum = Integer.MIN_VALUE;
+     
 
 
     }
