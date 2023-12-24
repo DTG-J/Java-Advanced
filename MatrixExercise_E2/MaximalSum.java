@@ -29,6 +29,11 @@ public class MaximalSum {
                         + matrix[row + 2][col] + matrix[row + 2][col + 1] + matrix[row + 2][col + 2];
             }
         }
+        //                for (int currentRow = row; currentRow < row + 3; currentRow++) {
+//                    for (int currentCol = col; currentCol < col + 3; currentCol++) {
+//                        sum += matrix[currentRow][currentCol];
+//                    }
+//                }
 
 
 
