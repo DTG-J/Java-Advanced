@@ -27,9 +27,15 @@ public class MaximalSum {
                 int sum = matrix[row][col] + matrix[row][col + 1] + matrix[row][col + 2]
                         + matrix[row + 1][col] + matrix[row + 1][col + 1] + matrix[row + 1][col + 2]
                         + matrix[row + 2][col] + matrix[row + 2][col + 1] + matrix[row + 2][col + 2];
+                if(sum > maxSum){
+                    maxSum = sum;
+                    bestStartingRow = row;
+                    bestStartingCol = col;
+                }
             }
         }
-        //                for (int currentRow = row; currentRow < row + 3; currentRow++) {
+
+//                for (int currentRow = row; currentRow < row + 3; currentRow++) {
 //                    for (int currentCol = col; currentCol < col + 3; currentCol++) {
 //                        sum += matrix[currentRow][currentCol];
 //                    }
