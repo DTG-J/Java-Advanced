@@ -41,7 +41,13 @@ public class MaximalSum {
 //                    }
 //                }
 
-
+        System.out.println("Sum = " + maxSum);
+        for (int row = bestStartingRow; row < bestStartingRow + 3; row++) {
+            for (int col = bestStartingCol; col < bestStartingCol + 3; col++) {
+                System.out.print(matrix[row][col] + " ");
+            }
+            System.out.println();
+        }
 
     }
 }
