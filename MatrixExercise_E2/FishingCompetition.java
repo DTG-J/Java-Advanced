@@ -45,9 +45,9 @@ public class FishingCompetition {
     }
 
     private static void printMatrix(char [][] matrix, int n){
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.print(matrix[i][j]);
+        for (int rows = 0; rows < n; rows++) {
+            for (int cols = 0; cols < n; cols++) {
+                System.out.print(matrix[rows][cols]);
 
             }
             System.out.println();
