@@ -14,8 +14,17 @@ public class FishingCompetition {
 
         int[] coordinates = fillMatrixAndGetCoordinates(matrix, scanner);
 
+        String input = scanner.nextLine();
 
-        printMatrix(matrix, n);
+        while (!input.equals("collect the nets")){
+
+
+
+
+
+            input = scanner.nextLine();
+        }
+            printMatrix(matrix, n);
 
     }
 
@@ -33,8 +42,8 @@ public class FishingCompetition {
                     break;
 
                 }
-                System.out.println();
             }
+
         }
         return coordinates;
     }
@@ -48,7 +57,10 @@ public class FishingCompetition {
             System.out.println();
         }
     }
-
+    private static void handleWhirlpool(int[] position) {
+        System.out.println("You fell into a whirlpool! The ship sank and you lost the fish you caught. " +
+                "Last coordinates of the ship: [" + position[0] + "," + position[1] + "]");
+    }
     private static void move(String command, int[] position, char[][] fishingArea) {
 
         int row = position[0];
