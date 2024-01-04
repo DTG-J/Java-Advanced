@@ -57,6 +57,12 @@ public class FishingCompetition {
             System.out.println();
         }
     }
+    private static void handleBoundaries(int[] position, int size) {
+        for (int i = 0; i < 2; i++) {
+            if (position[i] < 0) position[i] = size - 1;
+            else if (position[i] >= size) position[i] = 0;
+        }
+    }
     private static void handleWhirlpool(int[] position) {
         System.out.println("You fell into a whirlpool! The ship sank and you lost the fish you caught. " +
                 "Last coordinates of the ship: [" + position[0] + "," + position[1] + "]");
