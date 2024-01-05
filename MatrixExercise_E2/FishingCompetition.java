@@ -88,4 +88,22 @@ public class FishingCompetition {
                 break;
         }
     }
+    private static void handleResults(int quota, boolean whirlpool, char[][] fishingArea) {
+        if (quota >= 20) {
+            System.out.println("Success! You managed to reach the quota!");
+        } else if (!whirlpool) {
+            int lack = 20 - quota;
+            System.out.printf("You didn't catch enough fish and didn't reach the quota! You need %d tons of fish more.%n", lack);
+        }
+
+        if (quota > 0) {
+            System.out.printf("Amount of fish caught: %d tons.%n", quota);
+        }
+
+        if (!whirlpool) {
+            for (char[] chars : fishingArea) {
+                System.out.println(chars);
+            }
+        }
+    }
 }
