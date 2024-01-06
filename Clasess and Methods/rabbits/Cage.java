@@ -67,6 +67,20 @@ public class Cage {
     public int count (){
        return this.data.size();
     }
+   /* •	report() - returns a String in the following format, including only not sold rabbits:
+    o	"Rabbits available at {cageName}:
+    {Rabbit 1}
+    {Rabbit 2}
+(…)"*/
 
-
+    public String report (){
+        List<Rabbit> rabbits = this.data.stream().filter(Rabbit::isAvailable).collect(Collectors.toList());
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Rabbits available at %s:",getName()));
+      rabbits.forEach(rabbit -> {
+          sb.append(System.lineSeparator());
+          sb.append(rabbit.toString());
+      });
+        return sb.toString();
+    }
 }
