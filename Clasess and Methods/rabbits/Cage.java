@@ -34,10 +34,10 @@ public class Cage {
         Rabbit rabbit = this.data.stream()
                 .filter(r -> r.getName().equals(name))
                 .findFirst().orElse(null);
-        if (rabbit.isAvailable()) {
+        {
             return this.data.remove(rabbit);
         }
-        return false;
+
     }
     //•	removeSpecies(String species) method - removes all rabbits by given species
     public void removeSpecies(String species){
