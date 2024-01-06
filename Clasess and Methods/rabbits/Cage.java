@@ -55,4 +55,13 @@ public class Cage {
         rabbit.setAvailable(false);
         return rabbit;
     }
+    //•	sellRabbitBySpecies(String species) method - sells and returns all rabbits from that species as a List
+    public List<Rabbit> sellRabbitBySpecies(String species){
+        List<Rabbit> rabbits = this.data.stream()
+                .filter(r -> r.getSpecies()
+                .equals(species)).collect(Collectors.toList());
+        return rabbits;
+    }
+
+
 }
