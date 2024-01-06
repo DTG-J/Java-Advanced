@@ -60,6 +60,7 @@ public class Cage {
         List<Rabbit> rabbits = this.data.stream()
                 .filter(r -> r.getSpecies()
                 .equals(species)).collect(Collectors.toList());
+        rabbits.forEach(r -> r.setAvailable(false));
         return rabbits;
     }
 
