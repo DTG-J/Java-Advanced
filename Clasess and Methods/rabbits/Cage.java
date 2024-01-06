@@ -47,5 +47,12 @@ public class Cage {
       rabbitSpecies.forEach(r -> this.data.remove(r));*/
         this.data.removeIf(rabbit -> rabbit.getSpecies().equals(species));
     }
-
+    //•	sellRabbit(String name) method - sell (set its available property to
+    // false without removing it from the collection)
+    // the first rabbit with the given name, also return the rabbit
+    public Rabbit sellRabbit(String name){
+        Rabbit rabbit = this.data.stream().filter(r -> r.getName().equals(name)).findFirst().orElseThrow();
+        rabbit.setAvailable(false);
+        return rabbit;
+    }
 }
