@@ -63,6 +63,10 @@ public class Cage {
         rabbits.forEach(r -> r.setAvailable(false));
         return rabbits;
     }
+  //count() - returns the number of rabbits
+    public int count (){
+       return this.data.size();
+    }
 
 
 }
