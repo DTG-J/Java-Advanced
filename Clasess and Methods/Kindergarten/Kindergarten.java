@@ -53,4 +53,19 @@ public class Kindergarten {
     public int getChildrenCount (){
         return this.registry.size();
     }
+    //•	Method getChild(String firstName) - Returns the child with the given first name.
+    public Child getChild(String firstName){
+        Child child1 = this.registry.stream().filter(child -> child.getFirstName()
+                .equals(firstName)).findFirst().orElseThrow();
+        return child1;
+    }
+    //Desi decision:
+    //    public Child getChild(String firstName) {
+    //        for (Child child : this.registry) {
+    //            if (child.getFirstName().equals(firstName)) {
+    //                return child;
+    //            }
+    //        }
+    //        //няма такова дете
+    //        return null;
 }
