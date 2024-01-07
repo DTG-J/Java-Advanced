@@ -68,4 +68,31 @@ public class Kindergarten {
     //        }
     //        //няма такова дете
     //        return null;
+    //•	Method registryReport() – Orders the children by age ascending, then by first name ascending,
+    // then by last name ascending, and returns a String in the following format:
+    //o	"Registered children in {kindergartenName}:
+    //--
+    //{child1}
+    //--
+    //{child2}
+    //--
+    //(…)
+    //--
+    //{childn}"
+    public String registryReport(){
+        //by age ascending, then by first name ascending, then by last name ascending
+        List<Child> sortedChildren = this.registry.stream().sorted(Comparator.comparing(Child::getAge)
+                .thenComparing(Child::getFirstName)
+                .thenComparing(Child::getLastName)).collect(Collectors.toList());
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Registered children in %s:", this.name));
+
+        for (Child child: sortedChildren) {
+            sb.append(System.lineSeparator());
+            sb.append("--").append(System.lineSeparator());
+            sb.append(child.toString());
+
+        }
+        return sb.toString();
+    }
 }
