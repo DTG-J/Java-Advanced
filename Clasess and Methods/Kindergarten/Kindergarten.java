@@ -29,5 +29,18 @@ public class Kindergarten {
         }
         return false;
     }
+    //•	Method removeChild(String firstName) -
+    // removes a child by a given firstName.
+    // If removal is successful, returns true, otherwise, returns false.
+    public boolean removeChild(String firstName){
+        Child child1 = this.registry.stream()
+                .filter(child -> child.getFirstName()
+                        .equals(firstName)).findFirst().get();
+        if (registry.contains(child1)){
+            registry.remove(child1);
+            return true;
+        }
+        return false;
+    }
 
 }
