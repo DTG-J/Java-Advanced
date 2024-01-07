@@ -42,5 +42,15 @@ public class Kindergarten {
         }
         return false;
     }
-
+    //   Решение на ДЕСИ: public boolean removeChild(String firstName) {
+    //        for (Child child : this.registry) {
+    //            if (child.getFirstName().equals(firstName)) {
+    //                this.registry.remove(child);
+    //                return true;
+    //            }
+    //        }
+    //•	Getter getChildrenCount - Returns the number of all children registered.
+    public int getChildrenCount (){
+        return this.registry.size();
+    }
 }
